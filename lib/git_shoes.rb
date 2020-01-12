@@ -4,7 +4,7 @@ Shoes.app(width:1280, height: 720) do
   stack do
     flow do
       background "#24292E"
-      image "static/assets/img/icon_64.png"
+      image "static/icon_64.png"
       subtitle "GitHome", width: 100, stroke: white
       para "Search", stroke: white
       edit_line
@@ -13,10 +13,8 @@ Shoes.app(width:1280, height: 720) do
   end
 
   stack do
-    width: 99
-    border "24292E", strokewidth: 8
+    background "#3F4448"
     flow do
-      background "#dcdcdc"
       button("GitHub Homepage")
       button("Profile")
       button("Notifications")
