@@ -1,4 +1,8 @@
-Shoes.app(width:1280, height: 720) do
+# frozen_string_literal: true
+
+# rubocop: disable all
+
+Shoes.app(width: 1280, height: 720) do
   background "#FAFBFC"
   border "#525457".."#24292E", strokewidth: 12
 
@@ -30,7 +34,7 @@ Shoes.app(width:1280, height: 720) do
 
   stack(height: 60) do
     background "#2F3438".."#525457"
-    flow(width: 1280, displace_top: 15, displace_left: 8) do
+    flow(width: 1280, displace_top: 18, displace_left: 8) do
       button "Dashboard", icon: "#{DIR}/static/gitcons/home.png", width: 130, icon_pos: "left" do
       end
       button "Profile", icon: "#{DIR}/static/gitcons/profile.png", width: 130, margin_left: 7, icon_pos: "left" do
