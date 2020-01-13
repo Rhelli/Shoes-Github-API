@@ -35,8 +35,8 @@ Shoes.app(width: 1280, height: 720) do
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
             
             # INFORMATION POP UP  --------------------------------------------------------------------------------/
-            window(height: 500, width: 900, resizable: false) do
-              background "#FAFBFC"
+            window(height: 600, width: 900, resizable: false) do
+              background "#EBECEC"
               border "#525457".."#24292E", strokewidth: 12
 
               # INFORMATION TITLE  --------------------------------------------------------------------------------/
@@ -51,40 +51,49 @@ Shoes.app(width: 1280, height: 720) do
               # INFO TEXT  --------------------------------------------------------------------------------/
               stack(width: "100%") do
                 background "#2F3438".."#525457"
-                subtitle "Gitshoes is an open source, desktop based Github tool for programmers, built from Ruby, Shoes! 3 GUI & Github's API.", font: 'OpenSans.ttf normal 12', displace_left: 8, stroke: white
+                subtitle "Gitshoes is an open source, desktop based Github tool for programmers, built from Ruby, Shoes! 3 GUI & Github's API.", font: 'OpenSans.ttf normal 12', displace_left: 8, stroke: "#C8CACB"
               end
-              stack(width: "100%", displace_left: 8) do
-                para "Gitshoes enables programmers to easily view the most frequently used pages on Github, natively, from their desktop. Gitshoes includes the following functionality", font: "OpenSans 12"
+              stack(width: "100%", displace_left: 12, displace_top: 15) do
+                subtitle "Why?", font: "OpenSans normal 16", low: "single"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 12, displace_top: 5) do
+                para "As a programmer, my day always starts off with Github (minus three or four coffees) and it always ends with it.\nFor many programmers it is the same - so I set out to create a lightweight, minimal Github tool.", font: "Poppins normal 13"
+              end
+              stack(width: "100%", displace_left: 12) do
+                subtitle "What?", font: "OpenSans normal 16", low: "single"
+              end
+              stack(width: "100%", displace_left: 12) do
+                subtitle "Gitshoes allows you to access all your key Github information from your desktop, as well as perform a few well known actions. In Gitshoes v1.0 you can: ", font: "OpenSans normal 13"
+              end
+              stack(width: "100%", displace_left: 30) do
                 para " - View Your Dashboard", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - View Your Profile ", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - View Your Notifications", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - View Your Existing Repositories", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - Create New Repositories", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - View Pull Requests", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
+              stack(width: "100%", displace_left: 30) do
                 para " - View Issues", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
-                para " - Sign In/Sign Out Of Your Github Accounts", font: "Poppins normal 11"
+              stack(width: "100%", displace_left: 30) do
+                para " - Sign In/Sign Out", font: "Poppins normal 11"
               end
-              stack(width: "100%", displace_left: 8) do
-                para "", font: "Poppins normal 11"
+              stack(width: "100%", displace_left: 12) do
+                subtitle "Who?", font: "OpenSans normal 16", low: "single"
               end
-              stack(width: "100%", displace_left: 8) do
-                inscription "Gitshoes was created by Rory Hellier, 2020.", "Poppins normal 10"
+              stack(width: "100%", displace_left: 12) do
+                para "Gitshoes was created by Rory Hellier, 2020.", font: "Poppins normal 11"
               end
 
 
