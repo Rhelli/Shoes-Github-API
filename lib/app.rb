@@ -2,7 +2,7 @@
 
 # rubocop: disable all
 
-Shoes.app(width: 1280, height: 720) do
+Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   background "#FAFBFC"
   border "#525457".."#24292E", strokewidth: 12
 
