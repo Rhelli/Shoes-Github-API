@@ -64,7 +64,9 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
             @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
           end
           @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
-            @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
+            unless @search_query == nil
+              @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
+            end
           end
 
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
