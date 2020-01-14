@@ -8,6 +8,15 @@ require 'launchy'
 class Gitshoes < Shoes
 end
 
+=begin
+url "/", :dashboard
+url "/profile", :profile
+url "/notifications", :notifications
+url "/currentrepo", :currentrepos
+url "/newrepo", :newrepo
+url "/pullrequests", :pullrequests
+url "/issues", :issues
+=end
 Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   background "#FAFBFC"
   border "#525457".."#24292E", strokewidth: 12
@@ -36,7 +45,7 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
       stack width: "35%" do
         flow(height: 60, displace_top: 24, displace_left: 19) do
           para "Search Github:", stroke: "#C8CACB", font: "OpenSans normal 11", displace_top: 2
-          edit_line margin_left: 10, margin_right: 5
+          @search_input = edit_line margin_left: 10, margin_right: 5
           button icon: "#{DIR}/static/search.png", width: 33, height: 24
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
             
@@ -165,4 +174,6 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
       end
     end
   end
+
+  # MAIN BROSWER WINDOW ------------------------------------------------------------/
 end
