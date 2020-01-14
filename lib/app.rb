@@ -5,10 +5,19 @@
 require 'octokit'
 require 'launchy'
 
+=begin
+client_params = {
+  q: 'site:/',
+  device: 'desktop',
+
+}
+
+client = GoogleSearchResults.new(q: "site:", serp_api_key: "secret_api_key")
+hash_results = client.get_hash
+
 class Gitshoes < Shoes
 end
 
-=begin
 url "/", :dashboard
 url "/profile", :profile
 url "/notifications", :notifications
@@ -45,7 +54,10 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
       stack width: "35%" do
         flow(height: 60, displace_top: 24, displace_left: 19) do
           para "Search Github:", stroke: "#C8CACB", font: "OpenSans normal 11", displace_top: 2
-          @search_input = edit_line margin_left: 10, margin_right: 5
+          @search_input = edit_line margin_left: 10, margin_right: 5 do |l|
+            @search_input.finish = proc {|l| Launchy.open('https://github.com/search?utf8=%E2%9C%93&q='+'#{self}+'&ref=simplesearch')}
+          end
+
           button icon: "#{DIR}/static/search.png", width: 33, height: 24
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
             
