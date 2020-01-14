@@ -3,19 +3,10 @@
 # rubocop: disable all
 
 require 'octokit'
+require 'launchy'
 
 class Gitshoes < Shoes
 end
-
-url "/", :dashboard
-url "/profile", :profile
-url "/notifications", :notifications
-url "/currentrepos", :currentrepos
-url "/newrepo", :newrepo
-url "/prs", :prs
-url "/issues", :issues
-url "/login", :login
-url "/logout", :logout
 
 Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   background "#FAFBFC"
@@ -137,7 +128,33 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
       end
       button "Issues", icon: "#{DIR}/static/gitcons/issues.png", width: 120, margin_left: 7, icon_pos: "left" do
       end
+
+      # LOGIN WINDOW --------------------------------------------------------------------/
       button "Log In", icon: "#{DIR}/static/gitcons/login.png", width: 120, margin_left: 20, background: "#525457".."#24292E", icon_pos: "left" do
+        window(width: 500, height: 300, resizable: false) do
+          background "#FAFBFC"
+          border "#525457".."#24292E", strokewidth: 12
+          stack(width: 500, center: true, displace_left: 30, displace_top: 15) do
+            flow(width: 450, center: true) do
+              para "Username or email address", width: 450
+            end
+            flow(width: "80%", center: true) do
+              edit_line(width: 450)
+            end
+            flow(width: "80%", center: true) do
+              para "Password", width: 450
+              para link("Forgot Password?", click: proc {|btn, center, right|
+                Launchy.open("https://github.com/password_reset")
+                }), width: 450
+            end
+            flow(width: '80%', center: true) do
+              edit_line(secret: true, width: 450)
+            end
+            button "Sign In", width: "80%", center: true do
+            end
+            end
+          end
+            
       end
       button "Log Off", icon: "#{DIR}/static/gitcons/logout.png", width: 100, background: "#525457".."#24292E", icon_pos: "left" do
       end
