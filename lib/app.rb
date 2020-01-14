@@ -38,14 +38,22 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   # TOP LEVEL - ICON, TITLE & SEARCH --------------------------------------------------------------------------------/
   stack(height: 60) do
     background "#24292E".."#2F3438"
-    
+
     # LOGO --------------------------------------------------------------------------------/
     flow do
       stack width: "5%" do
         flow(height: 60) do
-          image "#{DIR}/static/whitelogo.png", height: 50, width: 50, displace_left: 10, displace_top: 10
+          def icon_button(img, &action)
+            img.hover { img.scale 1.1, 1.1 }
+            img.leave { img.scale -1.1, -1.1}
+            img.click { action.call }
+          end
+          icon_button(image "#{DIR}/static/whitelogo.png", height: 50, width: 50, displace_left: 10, displace_top: 10) do
+            Launchy.open("https://github.com/Rhelli/Shoes-Github-API?code=e503908f579f3612d7be&installation_id=6223077&setup_action=install")
+          end
         end
       end
+
 
       # TITLE --------------------------------------------------------------------------------/
       stack width: "60%" do
@@ -63,10 +71,15 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
             @search_query = l.text
             @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
           end
+
+=begin
           @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
             unless @search_query == nil
               @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
             end
+          end
+=end
+          @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
           end
 
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
@@ -133,13 +146,13 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
                 para "Gitshoes was created by Rory Hellier, 2020.", font: "Poppins normal 11"
               end
 
-
             end
+          end
           end
         end
       end
     end
-  end
+
 
   # NAVIGATION BUTTONS  --------------------------------------------------------------------------------/
   stack(height: 60) do
@@ -198,4 +211,7 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   end
 
   # MAIN BROSWER WINDOW ------------------------------------------------------------/
+  stack(width: 1257, height: 589, displace_left: 12) do
+    background white
+  end
 end
