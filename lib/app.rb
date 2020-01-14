@@ -2,6 +2,21 @@
 
 # rubocop: disable all
 
+require 'octokit'
+
+class Gitshoes < Shoes
+end
+
+url "/", :dashboard
+url "/profile", :profile
+url "/notifications", :notifications
+url "/currentrepos", :currentrepos
+url "/newrepo", :newrepo
+url "/prs", :prs
+url "/issues", :issues
+url "/login", :login
+url "/logout", :logout
+
 Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   background "#FAFBFC"
   border "#525457".."#24292E", strokewidth: 12
