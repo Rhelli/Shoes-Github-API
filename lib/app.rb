@@ -131,28 +131,33 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
 
       # LOGIN WINDOW --------------------------------------------------------------------/
       button "Log In", icon: "#{DIR}/static/gitcons/login.png", width: 120, margin_left: 20, background: "#525457".."#24292E", icon_pos: "left" do
-        window(width: 500, height: 300, resizable: false) do
-          background "#FAFBFC"
-          border "#525457".."#24292E", strokewidth: 12
-          stack(width: 500, center: true, displace_left: 30, displace_top: 15) do
-            flow(width: 450, center: true) do
-              para "Username or email address", width: 450
+        window(width: 500, height: 450, resizable: false, title: "Login") do
+          background "#151E26".."#1C2833"
+          border "#151E26".."#28333D", strokewidth: 12
+          stack(width: 500, center: true, displace_left: 50, displace_top: 20) do
+            image "#{DIR}/static/whitelogo.png", height: 60, width: 60, displace_left: 170, displace_top: 20
+            title "Sign in to Github", stroke: white, font: "OpenSans normal 22", displace_top: 25, displace_left: 95
+            flow(width: 450, center: true, displace_top: 20) do
+              para "Username or email address", width: 450, stroke: white, displace_top: 15, displace_left: 4, font: "OpenSans normal 13"
             end
             flow(width: "80%", center: true) do
-              edit_line(width: 450)
+              edit_line(width: 380, center: true, displace_top: 30, displace_left: 8)
             end
-            flow(width: "80%", center: true) do
-              para "Password", width: 450
+            flow(width: "80%", center: true, displace_top: 45) do
+              para "Password", width: 450, stroke: white, font: "OpenSans normal 13", displace_left: 4
               para link("Forgot Password?", click: proc {|btn, center, right|
                 Launchy.open("https://github.com/password_reset")
-                }), width: 450
+                }), width: 450, displace_left: 176, stroke: white, font: "OpenSans normal 11"
             end
-            flow(width: '80%', center: true) do
-              edit_line(secret: true, width: 450)
+            flow(width: '80%', center: true, displace_top: 40, displace_left: 8) do
+              edit_line(secret: true, width: 380, center: true)
             end
-            button "Sign In", width: "80%", center: true do
+            button "Sign In", width: 380, height: 35, center: true, displace_top: 60, displace_left: 8, font: "Poppins normal 20" do
             end
-            end
+            para link("Create an account", click: proc {|btn, center, right|
+              Launchy.open("https://github.com/join?source=login")
+              }), width: 450, displace_left: 127, displace_top: 90, stroke: white, font: "OpenSans normal 14"
+          end
           end
             
       end
