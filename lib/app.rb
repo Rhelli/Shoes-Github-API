@@ -60,11 +60,13 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
         flow(height: 60, displace_top: 24, displace_left: 19) do
           para "Search Github:", stroke: "#C8CACB", font: "OpenSans normal 11", displace_top: 2
           @search_input = edit_line margin_left: 10, margin_right: 5 do |l|
-            query = l.text
-            @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{query}&ref=simplesearch")}
+            @search_query = l.text
+            @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
+          end
+          @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
+            @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
           end
 
-          button icon: "#{DIR}/static/search.png", width: 33, height: 24
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
             
             # INFORMATION POP UP  --------------------------------------------------------------------------------/
