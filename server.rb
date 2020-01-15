@@ -14,8 +14,8 @@ In production, these values should be accessed as environement variables
 like this: CLIENT_ID = ENV['CLIENT_ID']
 =end
 
-CLIENT_ID = '206dd8b35895e3991cbb'
-CLIENT_SECRET = 'c64f8e4f26b229ff3ded6162a5cf09bb1454775c'
+CLIENT_ID = ENV['CLIENT_ID']
+CLIENT_SECRET = ENV['CLIENT_SECRET']
 
 
 # This is our login page that loads up our index.erb view
@@ -29,18 +29,33 @@ end
 # authenticated with GitHub (this is the 'callback URL' we entered when
 # registering our OAUth Application on GitHub.com).
 get '/profile' do
-  # Retrieve temp auth grant code
+  # Retrieve temporary authorization grant code
   session_code = request.env['rack.request.query_hash']['code']
-
-  # POST Auth grant code + Client ID/Secret ID in exchange for access_token
+  
+  # POST Auth Grant Code + CLIENT_ID/SECRECT in exchange for our access_token
   response = RestClient.post('https://github.com/login/oauth/access_token',
-    # POST
-    {:client_id => CLIENT_ID
-    :client_secret => CLIENT_SECRET
-    :code => session_code},
-    # Request header for JSON response
-    :accept => :json)
-
+                  # POST payload
+                  {:client_id => CLIENT_ID,
+                  :client_secret => CLIENT_SECRET,
+                  :code => session_code},
+                  # Request header for JSON response
+                  :accept => :json)
+  
+  # Parse access_token from JSON response
   access_token = JSON.parse(response)['access_token']
-	erb :profile
+  
+  # Initialize Octokit client with user access_token
+  client = Octokit::Client.new(:access_token => access_token)
+  
+  # Create user object for less typing
+  user = client.user
+  
+  # Access user data
+  profile_data = {:user_photo_url => user.avatar_url,
+                  :user_login => user.login,
+                  :user_name => user.name,
+                  :user_id => user.id }       
+  
+  # Render profile page, passing in user profile data to be displayed
+  erb :profile, :locals => profile_data
 end

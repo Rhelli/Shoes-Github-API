@@ -1,0 +1,2 @@
+system("ruby ./server.rb")
+

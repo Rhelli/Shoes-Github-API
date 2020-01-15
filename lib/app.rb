@@ -6,34 +6,8 @@ require 'octokit'
 require 'launchy'
 require 'quotable'
 
-=begin
-client_params = {
-  q: 'site: https://github.com/search/',
-  device: 'desktop',
-  hl: 'en',
-  safe:  'active',
-  num: '10',
-  api_key: ''
 
-
-}
-
-client = GoogleSearchResults.new(q: "site:", serp_api_key: "secret_api_key")
-hash_results = client.get_hash
-=begin
 class Gitshoes < Shoes
-end
-
-url "/", :dashboard
-url "/profile", :profile
-url "/notifications", :notifications
-url "/currentrepo", :currentrepos
-url "/newrepo", :newrepo
-url "/pullrequests", :pullrequests
-url "/issues", :issues
-=end
-class Gitshoes < Shoes
-
   url "/", :homepage
   url "/dashboard", :dashboard
   url "/profile", :profile
@@ -188,22 +162,8 @@ def homepage
           stack(width: 500, center: true, displace_left: 50, displace_top: 20) do
             image "#{DIR}/static/whitelogo.png", height: 60, width: 60, displace_left: 170, displace_top: 20
             title "Sign in to Github", stroke: white, font: "OpenSans normal 22", displace_top: 25, displace_left: 95
-            flow(width: 450, center: true, displace_top: 20) do
-              para "Username or email address", width: 450, stroke: white, displace_top: 15, displace_left: 4, font: "OpenSans normal 13"
-            end
-            flow(width: "80%", center: true) do
-              edit_line(width: 380, center: true, displace_top: 30, displace_left: 8)
-            end
-            flow(width: "80%", center: true, displace_top: 45) do
-              para "Password", width: 450, stroke: white, font: "OpenSans normal 13", displace_left: 4
-              para link("Forgot Password?", click: proc {|btn, center, right|
-                Launchy.open("https://github.com/password_reset")
-                }), width: 450, displace_left: 176, stroke: white, font: "OpenSans normal 11"
-            end
-            flow(width: '80%', center: true, displace_top: 40, displace_left: 8) do
-              edit_line(secret: true, width: 380, center: true)
-            end
-            button "Sign In", width: 380, height: 35, center: true, displace_top: 60, displace_left: 8, font: "Poppins normal 20" do
+            @sign_in_button = button "Sign In", width: 380, height: 35, center: true, displace_top: 60, displace_left: 8, font: "Poppins normal 20" do
+              Launchy.open("http://localhost:4567")
             end
             para link("Create an account", click: proc {|btn, center, right|
               Launchy.open("https://github.com/join?source=login")
@@ -257,6 +217,5 @@ def homepage
   end
 end
 end
-
 
 Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0")

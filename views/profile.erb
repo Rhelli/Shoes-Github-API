@@ -19,10 +19,20 @@
 		</style>
 	</head>
 	<body>
-		<div class="p-5">
-			<div class="blankslate blankslate-narrow p-9">
-				Success! You've Authenticated an OAuth Application with GitHub, and recieved a callback redirect to /profile.
-			</div>
-		</div>
+	    <div class="p-5">
+	        <div class="blankslate blankslate-narrow p-9">
+	            <img src="<%= user_photo_url %>" />
+	            <h3>
+	                Hey, <a href="<%= user_url %>">@<%= user_login %></a>!
+	            </h3>
+	            <p>
+	                You are GitHub user #<%= user_id %>
+	            </p>
+	            <p class="text-gray alt-text-small">
+	                Click <a href="https://api.github.com/users/<%= user_login %>">here</a> to see all of
+	                <br>your public profile data
+	            </p>
+	        </div>
+	    </div>
 	</body>
 </html>
