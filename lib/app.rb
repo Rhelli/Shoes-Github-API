@@ -4,11 +4,26 @@
 
 require 'octokit'
 require 'launchy'
+require 'quotable'
 
+=begin
+client_params = {
+  q: 'site: https://github.com/search/',
+  device: 'desktop',
+  hl: 'en',
+  safe:  'active',
+  num: '10',
+  api_key: ''
+
+
+}
+
+client = GoogleSearchResults.new(q: "site:", serp_api_key: "secret_api_key")
+hash_results = client.get_hash
+=begin
 class Gitshoes < Shoes
 end
 
-=begin
 url "/", :dashboard
 url "/profile", :profile
 url "/notifications", :notifications
@@ -17,21 +32,39 @@ url "/newrepo", :newrepo
 url "/pullrequests", :pullrequests
 url "/issues", :issues
 =end
-Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
-  background "#FAFBFC"
-  border "#525457".."#24292E", strokewidth: 12
+class Gitshoes < Shoes
 
+  url "/", :homepage
+  url "/dashboard", :dashboard
+  url "/profile", :profile
+  url "/notifications", :notifications
+  url "/currentrepo", :currentrepos
+  url "/newrepo", :newrepo
+  url "/pullrequests", :pullrequests
+  url "/issues", :issues
+
+def homepage
+    background "#2F3438".."#1C2833"
+    border "#525457".."#24292E", strokewidth: 12
   # TOP LEVEL - ICON, TITLE & SEARCH --------------------------------------------------------------------------------/
   stack(height: 60) do
     background "#24292E".."#2F3438"
-    
+
     # LOGO --------------------------------------------------------------------------------/
     flow do
       stack width: "5%" do
         flow(height: 60) do
-          image "#{DIR}/static/whitelogo.png", height: 50, width: 50, displace_left: 10, displace_top: 10
+          def icon_button(img, &action)
+            img.hover { img.scale 1.11, 1.11 }
+            img.leave { img.scale 0.9, 0.9}
+            img.click { action.call }
+          end
+          icon_button(image "#{DIR}/static/whitelogo.png", height: 50, width: 50, displace_left: 10,tooltip: "Gitshoes on Github", displace_top: 10) do
+            Launchy.open("https://github.com/Rhelli/Shoes-Github-API?code=e503908f579f3612d7be&installation_id=6223077&setup_action=install")
+          end
         end
       end
+
 
       # TITLE --------------------------------------------------------------------------------/
       stack width: "60%" do
@@ -45,8 +78,17 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
       stack width: "35%" do
         flow(height: 60, displace_top: 24, displace_left: 19) do
           para "Search Github:", stroke: "#C8CACB", font: "OpenSans normal 11", displace_top: 2
-          @search_input = edit_line margin_left: 10, margin_right: 5
-          button icon: "#{DIR}/static/search.png", width: 33, height: 24
+          @search_input = edit_line margin_left: 10, margin_right: 5 do |l|
+            @search_query = l.text
+            @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
+          end
+
+          @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
+            unless @search_query == nil
+              @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
+            end
+          end
+
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
             
             # INFORMATION POP UP  --------------------------------------------------------------------------------/
@@ -111,13 +153,13 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
                 para "Gitshoes was created by Rory Hellier, 2020.", font: "Poppins normal 11"
               end
 
-
             end
+          end
           end
         end
       end
     end
-  end
+
 
   # NAVIGATION BUTTONS  --------------------------------------------------------------------------------/
   stack(height: 60) do
@@ -140,7 +182,7 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
 
       # LOGIN WINDOW --------------------------------------------------------------------/
       button "Log In", icon: "#{DIR}/static/gitcons/login.png", width: 120, margin_left: 20, background: "#525457".."#24292E", icon_pos: "left" do
-        window(width: 500, height: 450, resizable: false, title: "Login") do
+        @login_window = window(width: 500, height: 450, resizable: false, title: "Login") do
           background "#151E26".."#1C2833"
           border "#151E26".."#28333D", strokewidth: 12
           stack(width: 500, center: true, displace_left: 50, displace_top: 20) do
@@ -176,4 +218,45 @@ Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0") do
   end
 
   # MAIN BROSWER WINDOW ------------------------------------------------------------/
+  stack(width: 1257, height: 589, displace_left: 12) do
+    background "#E3E4E5"
+    @main_body = title Quotable.random, stroke: "#707070", align: "center", displace_top: 250, font: "OpenSans 12"
+
+    def dashboard
+      
+    end
+
+    def profile
+  
+    end
+
+    def notifications
+  
+    end
+
+    def currentrepos
+  
+    end
+
+    def newrepo
+  
+    end
+
+    def pullrequests
+  
+    end
+
+    def issues
+  
+    end
+    
+    def issues
+  
+    end
+
+  end
 end
+end
+
+
+Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0")
