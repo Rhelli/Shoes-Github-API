@@ -1,7 +1,9 @@
+require 'dotenv/load'
 require 'sinatra' 		# Our handy lightweight webserver
 require 'rest-client' 	# Used for authentication with the GitHub OAuth API
 require 'json' 			# Used to parse the JSON response from the GitHub OAuth API
 require 'octokit' 		# Used to retrieve user data after authentication
+
 
 =begin
 [ !IMPORTANT! ]
