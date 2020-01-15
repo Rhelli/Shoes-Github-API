@@ -83,14 +83,10 @@ def homepage
             @search_input.finish = proc {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
           end
 
-=begin
           @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
             unless @search_query == nil
               @search_button.click {Launchy.open("https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch")}
             end
-          end
-=end
-          @search_button = button icon: "#{DIR}/static/search.png", width: 33, height: 24 do
           end
 
           button icon: "#{DIR}/static/gitcons/information.png", width: 33, height: 24, displace_left: 25 do
@@ -225,19 +221,9 @@ def homepage
   stack(width: 1257, height: 589, displace_left: 12) do
     background "#E3E4E5"
     @main_body = title Quotable.random, stroke: "#707070", align: "center", displace_top: 250, font: "OpenSans 12"
-    def search_results
-      unless @search_query == nil
-        @search_button.click do
-          download "https://github.com/search?utf8=%E2%9C%93&q=#{@search_query}&ref=simplesearch",
-          :method => "GET" do |dump|
-            @main_body.text = dump.response.body
-          end
-        end
-      end
-    end
 
     def dashboard
-  
+      
     end
 
     def profile
@@ -269,6 +255,7 @@ def homepage
     end
 
   end
+end
 end
 
 
