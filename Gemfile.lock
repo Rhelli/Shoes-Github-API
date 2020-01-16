@@ -38,6 +38,7 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
+    shoes (3.0.1)
     sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -58,6 +59,7 @@ DEPENDENCIES
   octokit
   quotable
   rest-client
+  shoes
   sinatra
 
 BUNDLED WITH
