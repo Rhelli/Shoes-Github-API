@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+gem 'shoes'
+gem "sinatra"
+gem "octokit"
+gem "launchy"
+gem "dotenv"
+gem "quotable"
+gem "rest-client"
+gem "json"
