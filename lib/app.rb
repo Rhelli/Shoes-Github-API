@@ -6,7 +6,7 @@ require 'octokit'
 require 'launchy'
 require 'quotable'
 require 'sinatra' 		# Our handy lightweight webserver
-require 'rest-client' 	# Used for authentication with the GitHub OAuth API
+require 'rest-client'	# Used for authentication with the GitHub OAuth API
 require 'json' 			# Used to parse the JSON response from the GitHub OAuth API
 
   CLIENT_ID = ENV['CLIENT_ID']
