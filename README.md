@@ -2,7 +2,7 @@
 <p align="center">
   <img src="assets/img/splash-screen.png" alt="Splash Screen" width="800" height="464">
 
-  <h1 align="center"> 👟 Gitshoes - A Native Github Tool</h1>
+  <h1 align="center"> 👠 Gitshoes - A Native Github Tool</h1>
 
 
   <p align="center">
@@ -34,16 +34,18 @@
     - [Requirements](#lets-play)
     - [Setup](#lets-play)
     - [Running Gitshoes](#lets-play)
-  - [Final Thoughts & Futures]()
   - [Contributions, Issues and Forking](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-contributions-issues-and-forking)
+  - [Final Thoughts & Futures]()
   - [Creator](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#--creators)
   - [Show Your Support!](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-show-your-support)
+  - [Acknowledgements]()
+  - [Notable Resources]()
   - [Licensing](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#%EF%B8%8F-licensing)
 
 
 ## 🧭 About Gitshoes
 
-This is the final project in the Ruby module to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!'). However, as this is the Capstone project for the section, some special rules apply:
+This is the final project in the Ruby module to be completed by students of [Microverse]("https://www.microverse.org/). However, as this is the Capstone project for the section, some special rules apply:
  - The project is to be completed individually
  - A 72 hour deadline is issued upon receipt of the project specifications
  
@@ -115,7 +117,7 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
  ### Ruby Gems
  - [Sinatra](https://rubygems.org/gems/sinatra) - Networking and Web server
- - [DotEnv](https://rubygems.org/gems/dotenv) - Loading environment variables
+ - [DotEnv](https://rubygems.org/gems/dotenv) - Loading environment variables (.env is normally in gitignore, however for demonstartion it is available in this repository)
  - [Rest-Client](https://rubygems.org/gems/rest-client) - OAuth authentication with Github's API
  - [JSON](https://rubygems.org/gems/json) - Parsing Github's API responses into JSON format
  - [Octokit](https://rubygems.org/gems/octokit) - Retrieval of user data following OAuth authentication carried out by rest-client
@@ -160,7 +162,14 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
     
             `bundle install --path "usr/local/bin/Shoes/lib/ruby/gems/2.3.0"
 
-### Running Gitshoes
+3. Installing assets - Copy the 'fonts' and 'static' folders from this repository into Shoes' main root directory and **merge** those already there. The directory path may look a little something like this:
+    
+            `C:\Program Files (x86)\Shoes`
+   Or
+            
+            `/Applications/Shoes.app/Contents/MacOS/`
+
+### Running with Gitshoes
 1. Open your terminal. `cd` into the Gitshoes repository and run the following command to start the server:
 
         `ruby server.rb`
