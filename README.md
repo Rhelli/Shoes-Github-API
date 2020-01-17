@@ -131,7 +131,7 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 2. You must [install Shoes3](http://shoesrb.com/downloads/) to open the Gitshoes.
 > Make a note of the path (where you placed) of the application. You will need it to install the RubyGems later.
 
-3. [Download this repository](https://github.com/Rhelli/Shoes-Github-API/archive/master.zip)
+3. Download [this repository](https://github.com/Rhelli/Shoes-Github-API/archive/master.zip)
 
 > N.B. For OSX Users - I'd strongly recommend ensuring you properly setup your environment prior to trying to use Ruby or RubyGems. 1. Ensure you have [Homebrew installed](https://brew.sh/) - that will make installing packages easier in the future. 2. Make sure you have [rbenv](https://github.com/rbenv/rbenv) installed (or RVM), otherwise you will be denied permission to install RubyGems to your own machine.
 
@@ -171,26 +171,6 @@ You're good to go!
 
 *********
 
-## 🔮 Final Thoughts & Futures
-Gitshoes is in it's infancy, and as such, it is lacking in the full suite of features that are first apparent to the user. However, as development progresses, I'd like to add the obvious features (such as making all the buttons fully functional) as well as a few others such as:
-  
-  Login:
-    - Transfer OAuth to OAuth2 in complicance with Github's authentication standards
-    - Allow for entirely in-app login
-    - Login screen opens first before main window
-    - Implementation of a 'Remember Me' feature to prevent having to log in every time the app is opened
-
-  Search:
-    - Simple radio/switch control for Google or Github Search
-
-  Functionality
-    - Create Pull Requests
-    - Create Issue
-    - Profile Acitibity Statistics & Graphs
-  
-  Thematic:
-    - Simple radio/switch control for day/night mode
-
 ## 🥂 Contributions, Issues and Forking
 
 Contributions, issues and feature requests are more than welcome! 
@@ -204,6 +184,27 @@ If you want to make your own changes, modifications or improvements, go ahead an
 4. Push to the branch (git push origin [chosen-name])
 5. Create a new Pull Request
 
+## 🔮 Final Thoughts & Futures
+Gitshoes is in it's infancy, and as such, it is lacking in the full suite of features that are first apparent to the user. However, as development progresses, I'd like to add the obvious features (such as making all the buttons fully functional) as well as a few others such as:
+
+  **Login:**
+  - Transfer OAuth to OAuth2 in complicance with Github's authentication standards
+  - Allow for entirely in-app login
+  - Login screen opens first before main window
+  - Implementation of a 'Remember Me' feature to prevent having to log in every time the app is opened
+
+  **Search:**
+  - Simple radio/switch control for Google or Github Search
+
+ **Functionality:**
+  - Create Pull Requests
+  - Create Issue
+  - Profile Acitibity Statistics & Graphs
+  
+  **Thematic:**
+  - Simple radio/switch control for day/night mode
+
+
 ## 👨🏽‍💻 Creator
 
 Rory Hellier - [Github](https://github.com/Rhelli)
@@ -216,7 +217,7 @@ Give a ⭐️ if you like this project!
  - Shoes3 for providing the GUI library
  - Github for their API
 
-## 🕵️🏽‍♂️ Noteable Resources
+## 📚 Noteable Resources
   - [Shoes3 Manual](http://shoesrb.com/manual/Hello.html) - Starting with Shoes
   - [Shoes3 Wiki](https://github.com/shoes/shoes3/wiki) - Advanced Use of Shoes
   - [OAuth-Ruby-Quickstart](https://github.com/githubOAuth-Ruby-Quickstart) - An excellent guide to getting simple OAuth authentication started using Sinatra, rest-client and Octokit
