@@ -73,18 +73,21 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 <p align="center>
 
 <img src="assets/img/login-screen.gif" alt="login screen" width="800" height="464">
+
 </p>
 
 ### Searching Github
 <p align="center>
 
 <img src="assets/img/search-screen.gif" alt="search screen" width="800" height="464">
+
 </p>
 
 ### The Information Window
 <p align="center>
 
 <img src="assets/img/info-screen.gif" alt="info screen" width="800" height="464">
+
 </p>
 
 ********
