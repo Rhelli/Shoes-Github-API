@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="splash-screen.png" alt="Splash Screen" width="900" height="522">
+  <img src="assets/img/splash-screen.png" alt="Splash Screen" width="900" height="522">
 
   <p align="center">
   
@@ -8,16 +8,16 @@
   </p>
 
   <p align="center">
-    The final cpastone project for Microverse's Ruby module
+    The Capstone project for Microvere's Ruby module
     <br />
-    <a href="https://github.com/queeksm/Tic-Tac-Toe/tree/master"><strong>Explore This Repository »</strong></a>
+    <a href="https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme"><strong>Explore This Repository »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/queeksm/Tic-Tac-Toe/archive/master.zip">Download The Game</a>
+    <a href="https://github.com/Rhelli/Shoes-Github-API/archive/feature/readme.zip">Download Gitshoes v0.1</a>
     ·
-    <a href="https://github.com/queeksm/Tic-Tac-Toe/issues">Report A Bug</a>
+    <a href="https://github.com/Rhelli/Shoes-Github-API/issues">Report A Bug</a>
     ·
-    <a href="https://github.com/queeksm/Tic-Tac-Toe/fork">Fork It</a>
+    <a href="https://github.com/Rhelli/Shoes-Github-API/fork">Fork It</a>
   </p>
 </p>
 
@@ -37,30 +37,56 @@
   - [Licensing](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#%EF%B8%8F-licensing)
 
 
-## ❓ About This Project
+## 🧭 About The Project
 
-This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
+This is the final project in the Ruby module to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!'). However, as this is the Capstone project for the section, some special rules apply.
+ - The project is entirely solo
+ - A 72 hour deadline is issued upon receipt of the project specifications
+ 
+The purpose of these specifications is to mimic real world deadlines and job specifications.
 
-This project consisted of creating a Tic-Tac-Toe game to be run from the command line, with the purpose of practicing and exercising the main concepts of Object Oriented Programming.
+## 🤷🏽‍♂️ What Is It?
+Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes is coded in Ruby, using the [Shoes3]('https://github.com/shoes/shoes3') GUI library and Github's very own API. The Shoes3 GUI library is written in C and then compiled into Ruby, however when it comes to the use of Shoes in this project, all code was written in Ruby. Current (v0.1) functionality available to those using Gitshoes are as follows:
+  - Search Github
+  - Recieve randomised, daily quotes on the start-up screen
+  - An information screen informing the user about the program
+  - A login screen which launches an OAuth request for the users Github credentials in browser.
 
-## 🚧 The Project Brief
+## ⁉️ Why Is It?
+It goes without saying that Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
 
-The project specification and assinment details are part of The Odin Project's Ruby Programming course, which can be found [here.](https://www.theodinproject.com/courses/ruby-programming/lessons/oop)
+For those of us who like to always have a Github page open in our browser, alongside ~100 other tabs, it can often get a little confusing or vague as to exactly where, amongst those 100 tabs you placed Github. That's where Gitshoes comes in.
 
-This project was split up into four key milestones:
-1. **Project Setup** - creating the two main directories: **lib** for game logic and **bin* for the executable file
+As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github expetrience (so to speak).
 
-2. **User Interface** - Creating the main play flow, user interactions, randomised messages and all other 'content' for the game.
+## 🚦 Current State & Limitations
+As of Gitshoes v0.1, there are a number of functions that have been implemented, however there is a longer list of function to **yet** be implemented. As this is a work in progress, the following fucntionality is planned for release at a future date:
+ - Import and view all of your dashboard, profile, existing repository, pull request and issue data and view that data inside Gitshoes.
+ - Implement an in-app search function versus redirecting to the broswer
+ - Greater cross-platform compatiblity between 32-bit and 64-bit systems.
 
-3. **Game Logic** - Creation of all classes and methods to make the game run. This is the main 'engine' of the game.
+## 🎯 The Nitty-Gritty
 
-4. **ReadMe**
+### Languages & Technologies
+ - HTML5
+ - CSS3
+ - Ruby 2.6.5
+ - [Shoes 3.3.1 GUI Library](https://github.com/shoes/shoes3)
+ - RSpec 3.9
+ - Rubocop 0.79.0
+ - Stickler-CI
+ - [Github API v3](https://developer.github.com/v3/)
 
-## 🔨 Technologies & Languages Used
+ ### Ruby Gems
+ - [Sinatra](https://rubygems.org/gems/sinatra) - Networking and Web server
+ - [DotEnv](https://rubygems.org/gems/dotenv) - Loading environment variables
+ - [Rest-Client](https://rubygems.org/gems/rest-client) - OAuth authentication with Github's API
+ - [JSON](https://rubygems.org/gems/json) - Parsing Github's API responses into JSON format
+ - [Octokit](https://rubygems.org/gems/octokit) - Retrieval of user data following OAuth authentication carried out by rest-client
+ - [Shoes](https://rubygems.org/gems/shoes) - GUI library
+ - [Quotable](https://rubygems.org/gems/quotable) - Randomised quotes for home screen
+ - [Launchy](https://rubygems.org/gems/launchy) - Lauching user Github code search requests within browser
 
-- Ruby
-- Rubocop
-- Stickler-CI
 
 ## 👾 How To Play
 ### Requirements
@@ -68,33 +94,6 @@ You must have Ruby downloaded and available on your computer. If you do not, you
 
 ___
 
-### Setup
-1. Download this repo and place it somewhere accessible and convenient.
-
-3. The file you will use to run the game is the **main** file, located in the       **bin** folder. If you cannot run the file out of the box, give the **main**     file execute permissions using the following command in terminal:
-
-        `chmod +x bin/main`
-
-    This will allow you to double click the file and run it easily.
-
-4. You will then be able to open the game by entering the following command into your terminal:
-
-        `ruby ./bin/main`
-
-> NB. In order for the two commands above to successfully be implemented in your terminal, you must navigate to the directory in which the game is located. [MORE INFO](https://help.ubuntu.com/community/UsingTheTerminal)
-
-___
-
-### Let's Play!
-Just incase you're not too familiar with the game of Tic-Tac-Toe (or Noughts and Crosses for that matter), it goes a little something like this:
-
-- The game is played on a 3x3 board
-- Each player is assigned either a 'O' or a 'X' at the start of the game
-- The objective of the game is to line up three of your 'X's or 'O's either horizontally,          vertically or diagonally.
-- Each player has one move per turn.
-- If neither player lines up their 'X's or 'O's, then it's a draw!
-
-Instructions are also optionally available in-game in case you forget!
 
 ## 🥂 Contributions, Issues and Forking
 
