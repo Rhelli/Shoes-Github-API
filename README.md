@@ -1,12 +1,9 @@
 
 <p align="center">
-  <img src="assets/img/splash-screen.png" alt="Splash Screen" width="900" height="522">
+  <img src="assets/img/splash-screen.png" alt="Splash Screen" width="800" height="464">
 
-  <p align="center">
-  
-  # Gitshoes - A Native Github Tool
-  
-  </p>
+  <h1 align="center"> 👟 Gitshoes - A Native Github Tool</h1>
+
 
   <p align="center">
     The Capstone project for Microvere's Ruby module
@@ -15,9 +12,9 @@
     <br />
     <br />
     <a href="https://github.com/Rhelli/Shoes-Github-API/archive/feature/readme.zip">Download Gitshoes v0.1</a>
-    ·
+    |
     <a href="https://github.com/Rhelli/Shoes-Github-API/issues">Report A Bug</a>
-    ·
+    |
     <a href="https://github.com/Rhelli/Shoes-Github-API/fork">Fork It</a>
   </p>
 </p>
@@ -40,31 +37,34 @@
 
 ## 🧭 About The Project
 
-This is the final project in the Ruby module to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!'). However, as this is the Capstone project for the section, some special rules apply.
- - The project is entirely solo
+This is the final project in the Ruby module to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!'). However, as this is the Capstone project for the section, some special rules apply:
+ - The project is to be completed individually
  - A 72 hour deadline is issued upon receipt of the project specifications
  
-The purpose of these specifications is to mimic real world deadlines and job specifications.
+The purpose of these specifications is to mimic real world deadlines and job specifications and test our resolve.
 
-## 🤷🏽‍♂️ What Is It?
+### 🤷🏽‍♂️ What Is It?
 Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes is coded in Ruby, using the [Shoes3]('https://github.com/shoes/shoes3') GUI library and Github's very own API. The Shoes3 GUI library is written in C and then compiled into Ruby, however when it comes to the use of Shoes in this project, all code was written in Ruby. Current (v0.1) functionality available to those using Gitshoes are as follows:
   - Search Github
   - Recieve randomised, daily quotes on the start-up screen
   - An information screen informing the user about the program
   - A login screen which launches an OAuth request for the users Github credentials in browser.
 
-## ⁉️ Why Is It?
+
+### ⁉️ Why Is It?
 It goes without saying that Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
 
 For those of us who like to always have a Github page open in our browser, alongside ~100 other tabs, it can often get a little confusing or vague as to exactly where, amongst those 100 tabs you placed Github. That's where Gitshoes comes in.
 
-As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github expetrience (so to speak).
+As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak).
 
-## 🚦 Current State & Limitations
-As of Gitshoes v0.1, there are a number of functions that have been implemented, however there is a longer list of function to **yet** be implemented. As this is a work in progress, the following fucntionality is planned for release at a future date:
+
+### 🚦 Current State & Limitations
+As of Gitshoes v0.1, there are a number of functions that exist, however there is an even longer list of function to **yet** be implemented. As this is a work in progress, the following fucntionality is planned for release at a future date:
  - Import and view all of your dashboard, profile, existing repository, pull request and issue data and view that data inside Gitshoes.
  - Implement an in-app search function versus redirecting to the broswer
  - Greater cross-platform compatiblity between 32-bit and 64-bit systems.
+
 
 ## 🎯 The Nitty-Gritty
 
@@ -89,11 +89,62 @@ As of Gitshoes v0.1, there are a number of functions that have been implemented,
  - [Launchy](https://rubygems.org/gems/launchy) - Lauching user Github code search requests within browser
 
 
-## 👾 How To Play
+## 👾 How To Use Gitshoes
 ### Requirements
-You must have Ruby downloaded and available on your computer. If you do not, you can download it [here.](https://www.ruby-lang.org/en/downloads/)
+1. You must have Ruby installed on your system. If you do not, please follow Ruby's ['Installing Guide'](https://www.ruby-lang.org/en/documentation/installation/) to get your system set up.
 
-___
+2. You must [install Shoes3](http://shoesrb.com/downloads/) to open the Gitshoes.
+> Make a note of the path (where you placed) of the application. You will need it to install the RubyGems later.
+
+3. [Download this repository](https://github.com/Rhelli/Shoes-Github-API/archive/master.zip)
+
+> N.B. For OSX Users - I'd strongly recommend ensuring you properly setup your environment prior to trying to use Ruby or RubyGems. 1. Ensure you have [Homebrew installed](https://brew.sh/) - that will make installing packages easier in the future. 2. Make sure you have [rbenv](https://github.com/rbenv/rbenv) installed (or RVM), otherwise you will be denied permission to install RubyGems to your own machine.
+
+### Setup
+1. Ensure you have the RubyGems needed for the application installed on your machine. To install them, enter the following into your        terminal:
+    - Install bundler:
+
+            `gem install bundler`
+
+      - Install the needed Gems for Gitshoes. Enter the following into your terminal (n.b. **not** the repository):
+
+                `bundle install`
+
+      Your terminal should now install the following RubyGems: sinatra, octokit, rest-client, launchy, dotenv, json, shoes, quotable and  launchy (along with their [dependencies](https://guides.rubygems.org/patterns/#declaring-dependencies)).
+
+2. Shoes handles it's own Gems, seperate from your system, so we must now duplicate step 2, **however** this time we are going to           install the gems **specifically into the Shoes app.**
+    - Mac OSX - Ensure the Shoes app you downloaded is in your application folder and enter the following into your terminal (ignore the 'deprecated message'):
+    
+        `bundle install --path /Applications/Shoes.app/Contents/MacOS/lib/ruby/gems/2.3.0`
+    
+    - Windows - Ensure Shoes installed correctly to your 'Program Files(x86)' folder and then enter the following into your terminal(ignore the 'deprecated message'):
+    
+        `bundle install --path "C:\Program Files (x86)\Shoes\lib\ruby\gems\2.3.0"
+    
+    - Linux - Ensure Shoes installed (depending on distro) to 'usr/local/bin' and then enter the following into your terminal(ignore the 'deprecated message'):
+    
+        `bundle install --path "usr/local/bin/Shoes/lib/ruby/gems/2.3.0"
+
+### Running Gitshoes
+1. Open your terminal. `cd` into the Gitshoes repository and run the following command to start the server:
+
+        `ruby server.rb`
+
+2. Open the Gitshoes app and select 'Run an App'. Then select 'app.rb' from inside the 'lib' folder inside the Gitshoes repository (Shoes-Github-API/lib/app.rb).
+
+You're good to go!
+
+
+
+
+
+    
+
+
+
+
+
+
 
 
 ## 🥂 Contributions, Issues and Forking
