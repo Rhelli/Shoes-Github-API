@@ -22,25 +22,25 @@
 
 
 ## Table of Contents
-  - [About Gitshoes](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-about-this-project)
-    - [What Is It?](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-the-project-brief)
-    - [Why Is It?](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-technologies--languages-used)
-    - [Current State & Limitations](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-technologies--languages-used)
-  - [Showcase](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-how-to-play)
-  - [The Nitty-Gritty](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-how-to-play)
-    - [Languages & Technologies](#requirements)
-    - [Ruby Gems](#setup)
-  - [How to Use Gitshoes](#lets-play)
-    - [Requirements](#lets-play)
-    - [Setup](#lets-play)
-    - [Running Gitshoes](#lets-play)
-  - [Contributions, Issues and Forking](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-contributions-issues-and-forking)
-  - [Final Thoughts & Futures]()
-  - [Creator](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#--creators)
-  - [Show Your Support!](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-show-your-support)
-  - [Acknowledgements]()
-  - [Notable Resources]()
-  - [Licensing](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#%EF%B8%8F-licensing)
+  - [About Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-about-gitshoes)
+    - [What Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-what-is-it)
+    - [Why Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-why-is-it)
+    - [Current State & Limitations](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-current-state--limitations)
+  - [Showcase](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-showcase)
+  - [The Nitty-Gritty](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-the-nitty-gritty)
+    - [Languages & Technologies](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#languages--technologies)
+    - [Ruby Gems](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#ruby-gems)
+  - [How to Use Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-how-to-use-gitshoes)
+    - [Requirements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#requirements)
+    - [Setup](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#setup)
+    - [Running Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#running-with-gitshoes)
+  - [Contributions, Issues and Forking](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-contributions-issues-and-forking)
+  - [Final Thoughts & Futures](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-final-thoughts--futures)
+  - [Creator](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-creator)
+  - [Show Your Support!](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-show-your-support)
+  - [Acknowledgements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-acknowledgements)
+  - [Notable Resources](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-noteable-resources)
+  - [Licensing](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-licensing)
 
 
 ## 🧭 About Gitshoes
@@ -133,7 +133,7 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 2. You must [install Shoes3](http://shoesrb.com/downloads/) to open the Gitshoes.
 > Make a note of the path (where you placed) of the application. You will need it to install the RubyGems later.
 
-3. Download [this repository](https://github.com/Rhelli/Shoes-Github-API/archive/master.zip)
+3. Download [this repository](https://github.com/Rhelli/Shoes-Github-API/archive/feature/readme.zip)
 
 > N.B. For OSX Users - I'd strongly recommend ensuring you properly setup your environment prior to trying to use Ruby or RubyGems. 1. Ensure you have [Homebrew installed](https://brew.sh/) - that will make installing packages easier in the future. 2. Make sure you have [rbenv](https://github.com/rbenv/rbenv) installed (or RVM), otherwise you will be denied permission to install RubyGems to your own machine.
 

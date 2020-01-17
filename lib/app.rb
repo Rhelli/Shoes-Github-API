@@ -185,40 +185,8 @@ def homepage
     background "#E3E4E5"
     @main_body = title Quotable.random, stroke: "#707070", align: "center", displace_top: 250, font: "OpenSans 12"
 
-    def dashboard
-      
-    end
-
-    def profile
-  
-    end
-
-    def notifications
-  
-    end
-
-    def currentrepos
-  
-    end
-
-    def newrepo
-  
-    end
-
-    def pullrequests
-  
-    end
-
-    def issues
-  
-    end
-    
-    def issues
-  
-    end
-
   end
 end
 end
 
-Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0")
+Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v0.1")
