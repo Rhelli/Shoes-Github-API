@@ -43,7 +43,7 @@ This is the final project in the Ruby module to be completed by students of [Mic
  
 The purpose of these specifications is to mimic real world deadlines and job specifications and test our resolve.
 
-## 🤷🏽‍♂️ What Is It?
+### 🤷🏽‍♂️ What Is It?
 Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes is coded in Ruby, using the [Shoes3]('https://github.com/shoes/shoes3') GUI library and Github's very own API. The Shoes3 GUI library is written in C and then compiled into Ruby, however when it comes to the use of Shoes in this project, all code was written in Ruby. Current (v0.1) functionality available to those using Gitshoes are as follows:
   - Search Github
   - Recieve randomised, daily quotes on the start-up screen
@@ -51,7 +51,7 @@ Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes 
   - A login screen which launches an OAuth request for the users Github credentials in browser.
 
 
-## ⁉️ Why Is It?
+### ⁉️ Why Is It?
 It goes without saying that Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
 
 For those of us who like to always have a Github page open in our browser, alongside ~100 other tabs, it can often get a little confusing or vague as to exactly where, amongst those 100 tabs you placed Github. That's where Gitshoes comes in.
@@ -59,12 +59,35 @@ For those of us who like to always have a Github page open in our browser, along
 As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak).
 
 
-## 🚦 Current State & Limitations
+### 🚦 Current State & Limitations
 As of Gitshoes v0.1, there are a number of functions that exist, however there is an even longer list of function to **yet** be implemented. As this is a work in progress, the following fucntionality is planned for release at a future date:
  - Import and view all of your dashboard, profile, existing repository, pull request and issue data and view that data inside Gitshoes.
  - Implement an in-app search function versus redirecting to the broswer
  - Greater cross-platform compatiblity between 32-bit and 64-bit systems.
 
+******
+
+## Previews
+
+### Logging In
+<p align="center>
+
+<img src="assets/img/login-screen.gif" alt="login screen" width="800" height="464">
+</p>
+
+### Searching Github
+<p align="center>
+
+<img src="assets/img/search-screen.gif" alt="search screen" width="800" height="464">
+</p>
+
+### The Information Window
+<p align="center>
+
+<img src="assets/img/info-screen.gif" alt="info screen" width="800" height="464">
+</p>
+
+********
 
 ## 🎯 The Nitty-Gritty
 
@@ -106,7 +129,7 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
             `gem install bundler`
 
-    - Install the needed Gems for Gitshoes. Enter the following into your terminal (n.b. **not** the repository):
+    - Install the needed Gems for Gitshoes. Enter the following into your terminal (this is gloabl, **not** just the repository):
 
             `bundle install`
 
@@ -133,18 +156,6 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 2. Open the Gitshoes app and select 'Run an App'. Then select 'app.rb' from inside the 'lib' folder inside the Gitshoes repository (Shoes-Github-API/lib/app.rb).
 
 You're good to go!
-
-
-
-
-
-    
-
-
-
-
-
-
 
 
 ## 🥂 Contributions, Issues and Forking
