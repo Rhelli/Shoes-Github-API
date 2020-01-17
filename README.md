@@ -2,10 +2,8 @@
 <p align="center">
   <img src="assets/img/splash-screen.png" alt="Splash Screen" width="900" height="522">
 
-  <p align="center">
-  
-  # Gitshoes - A native Github tool
-  </p>
+  <h1 align="center">Gitshoes - A native Github tool</h1>
+
 
   <p align="center">
     The Capstone project for Microvere's Ruby module
