@@ -4,7 +4,8 @@
 
   <p align="center">
   
-  # Gitshoes - A native Github tool
+  # Gitshoes - A Native Github Tool
+  
   </p>
 
   <p align="center">
