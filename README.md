@@ -22,20 +22,26 @@
 
 
 ## Table of Contents
-  - [About This Project](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-about-this-project)
-  - [The Project Brief](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-the-project-brief)
-  - [Technologies &amp; Languages Used](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-technologies--languages-used)
-  - [How To Play](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-how-to-play)
-    - [Requirements](#requirements)
-    - [Setup](#setup)
-    - [Let's Play!](#lets-play)
+  - [About Gitshoes](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-about-this-project)
+    - [What Is It?](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-the-project-brief)
+    - [Why Is It?](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-technologies--languages-used)
+    - [Current State & Limitations](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-technologies--languages-used)
+  - [Showcase](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-how-to-play)
+  - [The Nitty-Gritty](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-how-to-play)
+    - [Languages & Technologies](#requirements)
+    - [Ruby Gems](#setup)
+  - [How to Use Gitshoes](#lets-play)
+    - [Requirements](#lets-play)
+    - [Setup](#lets-play)
+    - [Running Gitshoes](#lets-play)
+  - [Final Thoughts & Futures]()
   - [Contributions, Issues and Forking](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-contributions-issues-and-forking)
-  - [Creators](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#--creators)
-  - [Show Your Support](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-show-your-support)
+  - [Creator](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#--creators)
+  - [Show Your Support!](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#-show-your-support)
   - [Licensing](https://github.com/queeksm/Tic-Tac-Toe/tree/game_instructions#%EF%B8%8F-licensing)
 
 
-## 🧭 About The Project
+## 🧭 About Gitshoes
 
 This is the final project in the Ruby module to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!'). However, as this is the Capstone project for the section, some special rules apply:
  - The project is to be completed individually
@@ -67,13 +73,14 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
 ******
 
-## Previews
+## 🎞️ Showcase
 
-### Logging In
+### Authentication & JSON Data
 <p align="center>
 
 <a href="assets/img/login-screen.gif"><img src="assets/img/login-screen.gif" alt="login screen" width="800" height="464"></a>
 
+> Logging in with Gitshoes - Either get directed to the 'Create an Account' page or get directed to the Github Login, where the app is authorised via OAuth.
 
 
 ### Searching Github
@@ -81,12 +88,14 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
 <a href="assets/img/search-screen.gif"><img src="assets/img/search-screen.gif" alt="search screen" width="800" height="464"></a>
 
-
+> Gitshoes uses 'Launchy' to search Github's code base
 
 ### The Information Window
 
 
 <a href="assets/img/info-screen.gif"><img src="assets/img/info-screen.gif" alt="info screen" width="800" height="464"></a>
+
+> A brief information screen detailing the what's and why's of Gitshoes.
 
 </p>
 
@@ -160,12 +169,33 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
 You're good to go!
 
+*********
+
+## 🔮 Final Thoughts & Futures
+Gitshoes is in it's infancy, and as such, it is lacking in the full suite of features that are first apparent to the user. However, as development progresses, I'd like to add the obvious features (such as making all the buttons fully functional) as well as a few others such as:
+  
+  Login:
+    - Transfer OAuth to OAuth2 in complicance with Github's authentication standards
+    - Allow for entirely in-app login
+    - Login screen opens first before main window
+    - Implementation of a 'Remember Me' feature to prevent having to log in every time the app is opened
+
+  Search:
+    - Simple radio/switch control for Google or Github Search
+
+  Functionality
+    - Create Pull Requests
+    - Create Issue
+    - Profile Acitibity Statistics & Graphs
+  
+  Thematic:
+    - Simple radio/switch control for day/night mode
 
 ## 🥂 Contributions, Issues and Forking
 
 Contributions, issues and feature requests are more than welcome! 
 
-If you have any problems running or setting up the game, please do check out the [issues page.](https://github.com/queeksm/Tic-Tac-Toe/issues)
+If you have any problems running or setting up Gitshoes, please submit it as a bug on the [issues page.](https://github.com/Rhelli/Shoes-Github-API/issues) right away!
 
 If you want to make your own changes, modifications or improvements, go ahead and Fork it!
 1. Fork it (https://github.com/queeksm/Tic-Tac-Toe/fork)
@@ -174,16 +204,22 @@ If you want to make your own changes, modifications or improvements, go ahead an
 4. Push to the branch (git push origin [chosen-name])
 5. Create a new Pull Request
 
-## 👨🏽‍💻 👨🏿‍💻 Creators
+## 👨🏽‍💻 Creator
 
 Rory Hellier - [Github](https://github.com/Rhelli)
 
-Andres Perez - [GitHub](https://github.com/queeksm)
-
-## 🖐🏼 Show Your Support
+## 🖐🏼 Show Your Support!
 
 Give a ⭐️ if you like this project!
 
-## ⚖️ Licensing
+## 🎩 Acknowledgements
+ - Shoes3 for providing the GUI library
+ - Github for their API
 
+## 🕵️🏽‍♂️ Noteable Resources
+  - [Shoes3 Manual](http://shoesrb.com/manual/Hello.html) - Starting with Shoes
+  - [Shoes3 Wiki](https://github.com/shoes/shoes3/wiki) - Advanced Use of Shoes
+  - [OAuth-Ruby-Quickstart](https://github.com/githubOAuth-Ruby-Quickstart) - An excellent guide to getting simple OAuth authentication started using Sinatra, rest-client and Octokit
+
+## ⚖️ Licensing
 This project is [MIT](https://github.com/queeksm/Tic-Tac-Toe/LICENSE.txt) licensed.
