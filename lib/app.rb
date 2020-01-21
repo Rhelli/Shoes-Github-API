@@ -11,6 +11,15 @@ require 'rest-client'
 require 'json'
 
 class Gitshoes < Shoes
+url "/", :homepage
+url "/dashboard", :dashboard
+url "/profile", :profile
+url "/notifications", :notifications
+url "/currentrepo", :currentrepos
+url "/newrepo", :newrepo
+url "/pullrequests", :pullrequests
+url "/issues", :issues
+
 def homepage
     background "#2F3438".."#1C2833"
     border "#525457".."#24292E", strokewidth: 12
