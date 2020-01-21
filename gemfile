@@ -8,3 +8,9 @@ gem "dotenv"
 gem "quotable"
 gem "rest-client"
 gem "json"
+gem "rake"
+
+group :test do
+  gem 'rack-test'
+  gem 'rspec'
+end
