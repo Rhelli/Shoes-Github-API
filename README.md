@@ -60,11 +60,11 @@ Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes 
 
 
 ### ⁉️ Why Is It?
-It goes without saying that Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
+Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
 
-For those of us who like to always have a Github page open in our browser, alongside ~100 other tabs, it can often get a little confusing or vague as to exactly where, amongst those 100 tabs you placed Github. That's where Gitshoes comes in.
+Likewise, for those of us who like to always have a Github page open in our browser, it can often get a little confusing or vague as to exactly where, you placed your Github page. That's where Gitshoes comes in.
 
-As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak).
+As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak). Gitshoes provides you witha lightweight, convenient tool to launch the most frequently used Github functions and pages straight from your desktop.
 
 
 ### 🚦 Current State & Limitations
