@@ -1,44 +1,14 @@
 # frozen_string_literal: true
 
 # rubocop: disable all
+
 require 'dotenv/load'
 require 'octokit'
 require 'launchy'
 require 'quotable'
-require 'sinatra' 		# Our handy lightweight webserver
-require 'rest-client'	# Used for authentication with the GitHub OAuth API
-require 'json' 			# Used to parse the JSON response from the GitHub OAuth API
-
-  CLIENT_ID = ENV['CLIENT_ID']
-  CLIENT_SECRET = ENV['CLIENT_SECRET']
-
-  get '/' do
-    erb :index, :locals => {:client_id => CLIENT_ID}
-  end
-  
-  get '/profile' do
-    session_code = request.env['rack.request.query_hash']['code']
-    response = RestClient.post('https://github.com/login/oauth/access_token',
-                    # POST payload
-                    {:client_id => CLIENT_ID,
-                    :client_secret => CLIENT_SECRET,
-                    :code => session_code},
-                    # Request header for JSON response
-                    :accept => :json)
-    # Parse access_token from JSON response
-    access_token = JSON.parse(response)['access_token']
-    # Initialize Octokit client with user access_token
-    client = Octokit::Client.new(:access_token => access_token)
-    # Create user object for less typing
-    user = client.user
-    # Access user data
-    profile_data = {:user_photo_url => user.avatar_url,
-                    :user_login => user.login,
-                    :user_name => user.name,
-                    :user_id => user.id }       
-    # Render profile page, passing in user profile data to be displayed
-    erb :profile, :locals => profile_data
-  end
+require 'sinatra'
+require 'rest-client'
+require 'json'
 
 class Gitshoes < Shoes
   url "/", :homepage
@@ -215,40 +185,8 @@ def homepage
     background "#E3E4E5"
     @main_body = title Quotable.random, stroke: "#707070", align: "center", displace_top: 250, font: "OpenSans 12"
 
-    def dashboard
-      
-    end
-
-    def profile
-  
-    end
-
-    def notifications
-  
-    end
-
-    def currentrepos
-  
-    end
-
-    def newrepo
-  
-    end
-
-    def pullrequests
-  
-    end
-
-    def issues
-  
-    end
-    
-    def issues
-  
-    end
-
   end
 end
 end
 
-Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v1.0")
+Shoes.app(width: 1280, height: 720, resizable: false, title: "GitShoes v0.1")
