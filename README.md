@@ -22,25 +22,25 @@
 
 
 ## Table of Contents
-  - [About Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-about-gitshoes)
-    - [What Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-what-is-it)
-    - [Why Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-why-is-it)
-    - [Current State & Limitations](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-current-state--limitations)
-  - [Showcase](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-showcase)
-  - [The Nitty-Gritty](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-the-nitty-gritty)
-    - [Languages & Technologies](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#languages--technologies)
-    - [Ruby Gems](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#ruby-gems)
-  - [How to Use Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-how-to-use-gitshoes)
-    - [Requirements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#requirements)
-    - [Setup](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#setup)
-    - [Running Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#running-with-gitshoes)
-  - [Contributions, Issues and Forking](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-contributions-issues-and-forking)
-  - [Final Thoughts & Futures](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-final-thoughts--futures)
-  - [Creator](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-creator)
-  - [Show Your Support!](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-show-your-support)
-  - [Acknowledgements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-acknowledgements)
-  - [Notable Resources](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#-noteable-resources)
-  - [Licensing](https://github.com/Rhelli/Shoes-Github-API/tree/feature/readme#%EF%B8%8F-licensing)
+  - [About Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-about-gitshoes)
+    - [What Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#%EF%B8%8F-what-is-it)
+    - [Why Is It?](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#%EF%B8%8F-why-is-it)
+    - [Current State & Limitations](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-current-state--limitations)
+  - [Showcase](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#%EF%B8%8F-showcase)
+  - [The Nitty-Gritty](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-the-nitty-gritty)
+    - [Languages & Technologies](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#languages--technologies)
+    - [Ruby Gems](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#ruby-gems)
+  - [How to Use Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-how-to-use-gitshoes)
+    - [Requirements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#requirements)
+    - [Setup](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#setup)
+    - [Running Gitshoes](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#running-with-gitshoes)
+  - [Contributions, Issues and Forking](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-contributions-issues-and-forking)
+  - [Final Thoughts & Futures](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-final-thoughts--futures)
+  - [Creator](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-creator)
+  - [Show Your Support!](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-show-your-support)
+  - [Acknowledgements](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-acknowledgements)
+  - [Notable Resources](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#-noteable-resources)
+  - [Licensing](https://github.com/Rhelli/Shoes-Github-API/tree/feature/unit_testing#%EF%B8%8F-licensing)
 
 
 ## 🧭 About Gitshoes
@@ -60,11 +60,11 @@ Gitshoes is a native desktop tool for using Github. At it's very core, Gitshoes 
 
 
 ### ⁉️ Why Is It?
-It goes without saying that Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
+Github is an integral part of all of our lives as developers - there's not a day that goes by where we are working on a project and aren't making frequent commits, searching Github's code database, creating new repositories, reviewing pull requests...the list goes on.
 
-For those of us who like to always have a Github page open in our browser, alongside ~100 other tabs, it can often get a little confusing or vague as to exactly where, amongst those 100 tabs you placed Github. That's where Gitshoes comes in.
+Likewise, for those of us who like to always have a Github page open in our browser, it can often get a little confusing or vague as to exactly where, you placed your Github page. That's where Gitshoes comes in.
 
-As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak).
+As a native application, Gitshoes seperates itself from your browser, making it easier to compartmentalise your Github experience (so to speak). Gitshoes provides you witha lightweight, convenient tool to launch the most frequently used Github functions and pages straight from your desktop.
 
 
 ### 🚦 Current State & Limitations
