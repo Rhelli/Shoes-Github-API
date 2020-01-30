@@ -101,7 +101,7 @@ As of Gitshoes v0.1, there are a number of functions that exist, however there i
 
 </p>
 
-********
+*******
 
 ## 🎯 The Nitty-Gritty
 
